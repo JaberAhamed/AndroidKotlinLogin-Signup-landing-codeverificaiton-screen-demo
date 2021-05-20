@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:id="@+id/ll_slider"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <ImageView
+            android:id="@+id/img_slider_icon"
+            android:layout_width="180dp"
+            android:layout_marginLeft="@dimen/margin_xtralarge"
+            android:layout_marginRight="@dimen/margin_xtralarge"
+            android:layout_height="180dp"
+            android:layout_marginTop="80dp"
+            android:layout_gravity="center_horizontal"
+
+            />
+
+        <TextView
+            android:id="@+id/tvSliderTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="40dp"
+            android:fontFamily="@font/poppins_bold"
+            android:lineHeight="25dp"
+            android:textAlignment="center"
+            android:textColor="@color/color_deep100"
+            android:textSize="22dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_slider_description"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:lineHeight="22dp"
+            android:text="Easy to Sign In and Sign Up. To join our community is very easy, so don’t be late join as soon as possible."
+            android:textSize="@dimen/text_size_medium"
+            android:layout_marginTop="@dimen/margin_medium"
+            />
+    </LinearLayout>
+
+</layout>

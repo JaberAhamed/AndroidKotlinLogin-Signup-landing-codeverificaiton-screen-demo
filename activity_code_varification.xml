@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    tools:context=".ui.phoneVarification.PhoneVerificationActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <ScrollView
+            android:id="@+id/srcl_phone"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:clipToPadding="false"
+            app:layout_constraintBottom_toTopOf="@+id/custom_keyboardID"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/img_slider_icon"
+                    android:layout_width="97dp"
+                    android:layout_height="101dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="98dp"
+                    android:layout_marginTop="46dp"
+                    android:layout_marginRight="98dp"
+                    android:src="@drawable/ic_hand_phone_blue"
+
+                    />
+
+                <TextView
+                    android:id="@+id/tv_titleID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/verify_numer"
+                    android:layout_marginTop="31dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textColor="@color/colorBlack_100"
+                    android:textSize="24dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_slider_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_large"
+                    android:fontFamily="@font/poppins_medium"
+                    android:lineHeight="22dp"
+                    android:text="@string/enter_code_text"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorDeepblue"
+                    android:textSize="@dimen/text_size_medium" />
+                <TextView
+                    android:id="@+id/tv_mobile_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                   android:layout_gravity="center"
+                    android:text="+8801705155705"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/text_size_medium" />
+
+                <com.bidyava.solutions.utils.CustomVerifyCode
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:id="@+id/customVerifyCode_ID"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_phone_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_large"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_large"
+                    android:layout_marginBottom="@dimen/margin_default"
+                    android:orientation="horizontal">
+
+
+
+                    <TextView
+                        android:id="@+id/tv_code_sendIssueID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/customVerifyCode_ID"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="@dimen/margin_default"
+                        android:gravity="center"
+                        android:text="@string/code_sent_text_issue"
+                        android:textColor="@color/colorDeepblue"
+                        android:textSize="14dp" />
+
+
+                    <TextView
+                        android:id="@+id/tv_resend_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_code_sendIssueID"
+                        android:layout_marginTop="@dimen/margin_default"
+                        android:text="@string/resend_code"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorGray_300"
+                        android:textSize="@dimen/text_size_medium" />
+
+
+                </RelativeLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/rlNext"
+                    style="@style/Button"
+                    android:background="@drawable/btn_done_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:shadowColor="@color/color_Orange100"
+                    android:outlineSpotShadowColor="@color/color_Orange100"
+                    android:outlineAmbientShadowColor="@color/color_Orange100"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:letterSpacing="0"
+                    android:enabled="true"
+                    android:stateListAnimator="@null"
+                    android:text="Done"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/text_size_medium"
+                    android:textColor="@color/colorDeepblue"
+                    app:cornerRadius="6dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_email_or_phone_error"
+                    app:rippleColor="@color/color_ripple" />
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+       <!-- <RelativeLayout
+            android:id="@+id/rl_next"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorGray_200"
+            app:layout_constraintBottom_toTopOf="@+id/custom_keyboardID"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/tv_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:background="@null"
+                android:text="@string/next"
+                android:textColor="@color/colorBlack_100"
+                android:textSize="@dimen/text_size_default" />
+
+            <ImageView
+                android:id="@+id/img_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:src="@drawable/ic_baseline_arrow" />
+
+
+        </RelativeLayout>-->
+
+        <com.bidyava.solutions.utils.CustomKeyboad
+            android:id="@+id/custom_keyboardID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+            />
+        <include
+            android:id="@+id/loading_layout"
+            layout="@layout/loading_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
